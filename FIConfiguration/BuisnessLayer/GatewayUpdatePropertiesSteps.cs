@@ -103,7 +103,7 @@ namespace FIConfiguration.BuisnessLayer
 			sb.Replace("ProbeResourceGroupName", value.ResourceGroupName);
 			sb.Replace("ProbeApplicationGatewayName", value.ApplicationGatewayName);
 			sb.Replace("ProbeName", value.ProbeName);
-			sb.Replace("ProbeHost", value.ProbeHost);
+			sb.Replace("ProbeHost", value.Host);
 			sb.Replace("ProbeProtocol", value.Protocol);
 			sb.Replace("Probepath", value.Probepath);
 			object AddProbeObject = JsonConvert.DeserializeObject<Object>(sb.ToString());

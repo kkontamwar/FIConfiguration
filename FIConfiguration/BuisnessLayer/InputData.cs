@@ -6,9 +6,10 @@
 		public string SubscriptionId { get; set; }
 		public string ResourceGroupName { get; set; }
 		public string ApplicationGatewayName { get; set; }
+
 		public string ProbeName { get; set; }
 		public string Protocol { get; set; }
-		public string ProbeHost { get; set; }
+		public string Host { get; set; }
 		public string Probepath { get; set; }
 
 		public string HttpSettingsName { get; set; }

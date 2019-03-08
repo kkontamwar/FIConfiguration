@@ -13,31 +13,10 @@ namespace FIConfiguration
 	public class ValuesController : ApiController
 	{
 		// GET api/values
-		public async Task<string> Get()
+		public string Get()
 		{
-
-			string clientId = "9cf11af2-b7dd-4081-af7f-98f3d34b4737";
-			List<string> lst = new List<string>();
-			var credentials = new UserPasswordCredential("", "");
-			var authContext = new AuthenticationContext("https://login.microsoftonline.com/414e96d3-f8a4-4c10-b323-11fa8ebfe195/oauth2/token"); //https://login.microsoftonline.com/414e96d3-f8a4-4c10-b323-11fa8ebfe195/oauth2/token
-																																				//var authContext = new AuthenticationContext("https://login.microsoftonline.com/common/oauth2/authorize");
-
-
-			var authResult = await authContext.AcquireTokenAsync("https://managment.azure.com/", clientId, credentials);
-			if (authResult == null)
-			{
-				lst.Add("Error");
-			}
-
-			return null;
-
-			//var credentials = SdkContext.AzureCredentialsFactory.FromServicePrincipal(clientId, clientSecret, tenantId, AzureEnvironment.AzureGlobalCloud);
-			//var azure = Azure.Configure().Authenticate(credentials).WithSubscription(subscriptionID);
-			//var resourecelist = azure.ResourceGroups.List().ToList();
-
-			//var serviceCreds = await ApplicationTokenProvider.LoginSilentAsync(tenantId, clientId, secret);
-			//var resourceClient = new ResourceManagementClient(serviceCreds);
-			//resourceClient.SubscriptionId = subscriptionID;
+			return "Hi from FI Configuration application !!";
+			
 		}
 
 		// GET api/values/5
